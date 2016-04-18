@@ -5,19 +5,21 @@ package edu.ucsd.cs110.temperature;
  */
 public class Celsius extends Temperature {
 
-        public Celsius(float t)
+    public Celsius(float t)
         {
             super(t);
         }
 
     @Override
     public Temperature toCelsius() {
-        return null;
+        Temperature temp = new Celsius(value);
+        return temp;
     }
 
     @Override
     public Temperature toFahrenheit() {
-        return null;
+        Temperature temp = new Celsius(value*9/5+32);
+        return temp;
         //return (value*9/5+32);
     }
 
@@ -25,6 +27,6 @@ public class Celsius extends Temperature {
     public String toString()
         {
             // TODO: Complete this method
-            return "";
+            return ""+this.getValue()+" "+"C";
         }
 }

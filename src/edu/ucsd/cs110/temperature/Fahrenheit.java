@@ -11,19 +11,21 @@ public class Fahrenheit extends Temperature {
 
     @Override
     public Temperature toCelsius() {
-        return null;
+        Temperature temp = new Fahrenheit((value-32)*5/9);
+        return temp;
     }
 
     @Override
     public Temperature toFahrenheit() {
-        return null;
+        Temperature temp = new Fahrenheit(value);
+        return temp;
     }
 
 
     public String toString()
     {
         // TODO: Complete this method
-        return "";
+        return ""+this.getValue()+" "+"F";
     }
 }
 
